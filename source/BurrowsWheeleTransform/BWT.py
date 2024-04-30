@@ -1,5 +1,5 @@
-# import divsufsort
-import sufarray
+import divsufsort
+# import sufarray
 
 class BWT:
     def __init__(self):
@@ -20,10 +20,10 @@ class BWT:
                     simb = 1
                     data += simb.to_bytes(1, byteorder="big")
 
-                    sarray = sufarray.SufArray(data)
-                    suffix_array = sarray.get_array()
+                    # sarray = sufarray.SufArray(data)
+                    # suffix_array = sarray.get_array()
 
-                    # suffix_array = divsufsort.divsufsort(data)
+                    suffix_array = divsufsort.divsufsort(data)
                     index = suffix_array.index(0)
 
                     for i in range(len(suffix_array)):
